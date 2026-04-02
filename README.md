@@ -5,8 +5,11 @@ This project modernizes the traditional Nurse Call Button system into an AI-powe
 Patients can speak or press options, and the system intelligently routes requests to the appropriate department such as:
 
 Housekeeping
+
 Maintenance
+
 IT Support
+
 Nursing Station
 
 This reduces manual workload on nurses and improves response efficiency.
@@ -22,8 +25,11 @@ Delayed Response: Increases response time and reduces patient satisfaction
 🎯 Objectives
 
 Smart Routing: Automatically route requests to correct departments
+
 Voice + Key Input Support: Accept both speech and DTMF input
+
 Automated Workflow: Reduce human intervention in non-critical tasks
+
 Scalable Architecture: Build a cloud-ready IVR system
 
 🏗️ System Architecture
@@ -43,24 +49,39 @@ Intent Handling & Routing
 ⚙️ Tech Stack
 
 Backend: FastAPI (Python)
+
 Telephony: Twilio Voice API
+
 Speech Handling: Twilio Speech Recognition
+
 Testing: Pytest
+
 Deployment: Render (Cloud Hosting)
+
 Tunneling (Development): Ngrok
 
 🔄 IVR Flow
 
 1 User receives a call from Twilio
+
 2 FastAPI /voice endpoint handles the request
+
 3 System plays welcome message using Text-to-Speech
+
 4 User responds via:
+
 --Speech (e.g., "housekeeping")
+
 --Keypad input (1, 2, 3, 4)
+
 5 /handle-intent processes input
+
 6 System routes to appropriate service
+
 7 Submenu (if needed) is triggered
+
 8 Confirmation message is played
+
 9 Call ends
 
 🧪 Testing
@@ -68,26 +89,29 @@ Tunneling (Development): Ngrok
 The system was tested using a multi-layer approach:
 
 ✔ Unit Testing
-  Tested endpoints like /voice and /handle-intent
-  Verified TwiML responses
+  -Tested endpoints like /voice and /handle-intent
+  -Verified TwiML responses
   
 ✔ Integration Testing
-  Simulated full IVR flows
-  Verified routing between menus
+  -Simulated full IVR flows
+  -Verified routing between menus
   
 ✔ End-to-End Testing
-  Tested using real Twilio calls
-  Verified complete call experience
+ -Tested using real Twilio calls
+  -Verified complete call experience
   
 ✔ Performance Testing
-  Measured response time
-  Ensured low latency
+  -Measured response time
+ -Ensured low latency
 
 🚀 Deployment
 
 The backend is deployed using Render for public access.
+
 FastAPI hosted on cloud
+
 HTTPS enabled
+
 Twilio webhook configured to deployed URL
 
 Note:
@@ -97,9 +121,13 @@ The system is demonstrated using a reverse-call approach.
 📂 Project Structure
 
 backend.py → FastAPI IVR backend
+
 test_ivr.py → Pytest test cases
+
 trigger_call.py → Twilio call trigger script
+
 requirements.txt → Dependencies
+
 README.md → Documentation
 
 🧠 Key Features
