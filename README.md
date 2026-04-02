@@ -70,12 +70,15 @@ The system was tested using a multi-layer approach:
 ✔ Unit Testing
   Tested endpoints like /voice and /handle-intent
   Verified TwiML responses
+  
 ✔ Integration Testing
   Simulated full IVR flows
   Verified routing between menus
+  
 ✔ End-to-End Testing
   Tested using real Twilio calls
   Verified complete call experience
+  
 ✔ Performance Testing
   Measured response time
   Ensured low latency
@@ -102,9 +105,13 @@ README.md → Documentation
 🧠 Key Features
 
 ✔ Voice + keypad input support
+
 ✔ Dynamic TwiML generation
+
 ✔ Multi-level IVR menus
+
 ✔ Real-time request routing
+
 ✔ Scalable backend
 
 🔮 Future Enhancements
